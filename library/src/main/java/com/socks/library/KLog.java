@@ -271,7 +271,7 @@ public final class KLog {
 
     private static String[] wrapperContent(int stackTraceIndex, String tagStr, Object... objects) {
 
-        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+        StackTraceElement[] stackTrace = new Throwable().getStackTrace();
 
         StackTraceElement targetElement = stackTrace[stackTraceIndex];
         String className = targetElement.getClassName();
