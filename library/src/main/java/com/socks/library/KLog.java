@@ -51,6 +51,9 @@ public final class KLog {
     public static final int E = 0x5;
     public static final int A = 0x6;
 
+    /** 日志级别，大于等于此级别显示日志 */
+    private static int debugLevel = V;
+
     private static final int JSON = 0x7;
     private static final int XML = 0x8;
 
@@ -222,6 +225,10 @@ public final class KLog {
             return;
         }
 
+        if (type < debugLevel) {
+            return;
+        }
+
         String[] contents = wrapperContent(STACK_TRACE_INDEX_5, tagStr, objects);
         String tag = contents[0];
         String msg = contents[1];
@@ -325,4 +332,11 @@ public final class KLog {
         }
     }
 
+    public static int getDebugLevel() {
+        return debugLevel;
+    }
+
+    public static void setDebugLevel(int debugLevel) {
+        KLog.debugLevel = debugLevel;
+    }
 }
