@@ -1,7 +1,5 @@
 # KLog
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ZhaoKaiQiang-green.svg?style=true)](https://android-arsenal.com/details/1/2782)
-
 [![](https://jitpack.io/v/isunky/KLog.svg)](https://jitpack.io/#isunky/KLog)
 
 This is a useful log tool for Android 
